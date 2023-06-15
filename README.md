@@ -18,6 +18,11 @@ To run `audio_characterization_main.ipynb`, check for the following:
 - Install the package `soundfile` into the Pynq system by running `sudo pip3 install soundfile` on the bash shell.
 - Move the contents of `PYNQ_overlay_files` into `\pynq\xilinx\pynq\overlays` directory on the embedded system. The notebook uses the following path for the bitstream file: `/home/xilinx/pynq/overlays/LPF/low_pass_filter.bit`. The rest of the files from  `PYNQ_overlay_files` are on the same directory.
 
+## Configuration process:
+Vivado 2022.2 and Pynq Image V3 were used for this project.
+1. Git clone project into local machine.
+2. Open Vivado 2022.2. On the Tcl console, change the current directory to the Vivado folder from this repository. Then create the project by running `source 
+
 ## How can I change the input signal and environment filter files?
 The `audio_characterization_main.ipynb` showcases how to do it, by either using pre-recorded wav files, or record new ones.
 
