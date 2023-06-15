@@ -21,7 +21,11 @@ To run `audio_characterization_main.ipynb`, check for the following:
 ## Configuration process:
 Vivado 2022.2 and Pynq Image V3 were used for this project.
 1. Git clone project into local machine.
-2. Open Vivado 2022.2. On the Tcl console, change the current directory to the Vivado folder from this repository. Then create the project by running `source 
+2. Open Vivado 2022.2. On the Tcl console, change the current directory to the Vivado folder from this repository. Then create the project by running `source generateSystemProject.tcl`. This will open the project on the local machine.
+3. Download the official PYNQ image from http://www.pynq.io/board.html . Be sure to download a version >= 3.0.
+4. Follow the Startup guide to get the PYNQ system running. It can be found here: https://pynq.readthedocs.io/en/latest/getting_started/pynq_z2_setup.html#pynqz2-board-setup
+5. Connect the PYNQ to the internet by connecting its ethernet cable into the Router. On a bash shell connected to the system through Serial (baud rate = 115200), run `sudo pip3 install soundfile` to install the extra dependency.
+6. Run the script ` audio_characterization_main.ipynb` sequentially in order to record (or load) audio data, process it, and output the data as a file to the SD card and play it.
 
 ## How can I change the input signal and environment filter files?
 The `audio_characterization_main.ipynb` showcases how to do it, by either using pre-recorded wav files, or record new ones.
